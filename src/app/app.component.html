@@ -1,0 +1,11 @@
+<div style="min-height: 100vh; background-image: url('https://i.pinimg.com/736x/f5/68/43/f568432442a67afa899f1277b76b3310.jpg');">
+    <app-header (featureSelected)="onNavigate($event)"></app-header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <app-recipes *ngIf="loadedFeature ==='recipe'"></app-recipes>
+                <app-shopping-list *ngIf="loadedFeature !=='recipe'"></app-shopping-list>
+            </div>
+        </div>
+    </div>
+</div>

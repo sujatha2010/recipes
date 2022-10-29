@@ -1,0 +1,16 @@
+<div class="row" style="background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220506/pngtree-3d-background-podium-cylinder-to-show-cosmetic-product-template-image_1295703.jpg'); min-height: 80vh">
+    <div class="col-xs-10">
+        <app-shopping-edit
+        (ingredientAdded)="onIngredientAdded($event)" 
+        (ingredientDeleted)="onIngredientDeleted($event)"></app-shopping-edit>
+  <hr>
+  <ul class="list-group">
+    <a class="list-group-item"
+        style="cursor: pointer"
+        *ngFor="let ingredient of ingredients">
+      {{ ingredient.name}} ({{ ingredient.amount}})
+    </a>
+  </ul>
+  
+    </div>
+</div>
